@@ -1,0 +1,12 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{1}{section.1}
+\contentsline {section}{\numberline {2}Creaci\IeC {\'o}n de un blog}{1}{section.2}
+\contentsline {section}{\numberline {3}An\IeC {\'a}lisis y dise\IeC {\~n}o formal}{1}{section.3}
+\contentsline {subsection}{\numberline {3.1}An\IeC {\'a}lisis formal}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Dise\IeC {\~n}o formal}{2}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Dise\IeC {\~n}o de la base de datos}{2}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Dise\IeC {\~n}o de las webs}{2}{subsubsection.3.2.2}
+\contentsline {section}{\numberline {4}Soluci\IeC {\'o}n Propuesta}{2}{section.4}
+\contentsline {subsection}{\numberline {4.1}Creaci\IeC {\'o}n de la base de datos}{2}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Creaci\IeC {\'o}n del modelo de la base de datos}{2}{subsection.4.2}
+\contentsline {section}{\numberline {5}Mejoras en la aplicaci\IeC {\'o}n}{3}{section.5}
