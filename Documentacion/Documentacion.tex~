@@ -1,0 +1,109 @@
+\documentclass[a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\graphicspath{{../BBDD/}{../Diseños/}}
+
+\title{Prueba LAMP Senior Developer}
+\author{Miguel Ángel Ortiz Iglesias}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\chapter{Introducción}
+	El presente documento pretende ser uno de los requisitos que imponen en la prueba de capacidades  para desarrollador LAMP.
+	
+	El documento está dividido en una pequeña definición del problema, ver capitulo \ref{definicion}, un análisis  del problema, ver capitulo \ref{analisis}, 
+	\chapter{Creación de un blog}\label{definicion}
+	La prueba de capacidad consiste en la creación de un blog con detección de móvil (Marca/Modelo) que accede. El sistema tendrá una parte pública donde se pueden ver y crear los posts y una parte de admin donde se pueden censurar.
+	
+	\chapter{Análisis y diseño formal}\label{analisis}
+	En el presente capitulo se va a  explicar cual ha sido el resultado del análisis así como del diseño formal al que se ha llegado.
+	\section{Análisis formal}
+	Para poder ver los post que se han publicado es necesario tenerlos guardados en algún sitio, así como saber quien lo ha publicado, y si dicho post tiene una respuesta de alguien. Es por ello que se necesita una base de datos para poder acceder a dicha información.\newline
+	También será necesario disponer de diferentes webs por las que navegar.\newline
+	Cada usuario registrado dispone de una parte de administración para poder controlar y censurar los diferentes comentarios que consideré inapropiados.
+	
+	\section{Diseño formal}
+	El diseño se puede dividir en dos partes.
+	\begin{enumerate}
+		\item Diseño de la base de datos.
+		\item Diseño de las webs en las que se compone la aplicación.
+	\end{enumerate}
+	
+	\subsection{Diseño de la base de datos}
+	La base de datos se ha realizado en UML, tal y como se puede observar en la figura \ref{modeloER}, y representan una primera versión de lo necesario para poder desarrollar la tarea. Cabe destacar que será necesario disponer de una segunda base de datos para poder guardar los datos de los usuarios así como de su contraseña de acceso.
+	\begin{figure}
+		\includegraphics[keepaspectratio,width=\textwidth]{modeloER}
+		\caption{Modelo UML}
+		\label{modeloER}
+	\end{figure}
+	
+	\subsection{Diseño de las webs}
+	En las figuras \ref{home}, \ref{login} y \ref{} se pueden observar los diferentes diseños que se han planteado para cada una de las partes de la aplicación.
+	\begin{figure}
+		\includegraphics{DisenoWebHome}
+		\caption{Diseño del home}
+		\label{home}
+	\end{figure}
+	\begin{figure}
+		\includegraphics{DisenoWebLogin}
+		\caption{Diseño del login}
+		\label{login}
+	\end{figure}
+	\begin{figure}
+		\includegraphics{}
+		\caption{}
+		\label{}
+	\end{figure}
+	\begin{figure}
+		\includegraphics{}
+		\caption{}
+		\label{}
+	\end{figure}
+	
+	\chapter{Solución Propuesta}
+% 	En el presente capítulo se van a mostrar los diversos diseños de las diferentes webs de la aplicación.
+	
+	
+	\chapter{Mejoras en la aplicación}
+% 	En el presente capítulo pretende ser un compendio de 
+% 	Existen toda una serie de mejoras que se tienen que estudiar para ver si son factibles instalarlas.
+	
+	\begin{itemize}
+		\item Añadir una base de datos con los datos y las contraseñas de los usuarios.
+		
+	\end{itemize}
+	
+	
+% 	\section{Precisión}
+% 	Usar los conceptos y/o términos, definir los conceptos y explicarlos la primera vez que salen, definir los acrónimos.
+% 	\section{Claridad}
+% 	Ordenar las cosas, de lo general a lo particular. No usar conceptos que no ha sido definidos
+% 	\chapter{Solución Propuesta}
+% 	Planificar y hacer esquemas.
+% 	\section{Introducción}
+% 	\section{Antecedentes}
+% 	\section{Planteamientos}
+% 	\section{Partes}
+% 	\section{Resultados}
+% 	\section{Conclusiones}
+% 	\chapter{Problemas encontrados}
+% 	
+% 	\chapter{Conclusiones}
+% 	
+% 	\chapter{Sugerencias}
+% 	
+% 	\chapter{Bibliografía}
+% 	Usar las referencias bibliográficas que ofrece \LaTeX.
+% 	\chapter{Apéndices}
+% 	
+% 	\section{Código Fuente}
+% 	
+% 	\section{Manual de Usuario}
+% 	
+% 	\section{Tabla de Figuras}
+	%\tableoffigures
+	
+\end{document}
