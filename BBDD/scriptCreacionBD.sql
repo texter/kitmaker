@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS db_blog;
+
+USE db_blog;

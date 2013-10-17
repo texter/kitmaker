@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.22)  17 OCT 2013 20:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.22)  17 OCT 2013 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,28 +545,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../BBDD/modeloER.pdf, id=75, 597.50786pt x 845.04686pt>
+<../BBDD/modeloER.pdf, id=85, 597.50786pt x 845.04686pt>
 File: ../BBDD/modeloER.pdf Graphic file (type pdf)
 
 <use ../BBDD/modeloER.pdf>
 Package pdftex.def Info: ../BBDD/modeloER.pdf used on input line 71.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebHome.pdf, id=83, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebHome.pdf, id=93, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebHome.pdf Graphic file (type pdf)
 
 <use ../Disenos/DisenoWebHome.pdf>
 Package pdftex.def Info: ../Disenos/DisenoWebHome.pdf used on input line 80.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebLogin.pdf, id=84, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebLogin.pdf, id=94, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebLogin.pdf Graphic file (type pdf)
 
 <use ../Disenos/DisenoWebLogin.pdf>
 Package pdftex.def Info: ../Disenos/DisenoWebLogin.pdf used on input line 85.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebCreacionPosts.pdf, id=85, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebCreacionPosts.pdf, id=95, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebCreacionPosts.pdf Graphic file (type pdf)
 
 <use ../Disenos/DisenoWebCreacionPosts.pdf>
@@ -574,7 +574,7 @@ Package pdftex.def Info: ../Disenos/DisenoWebCreacionPosts.pdf used on input li
 ne 90.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebCreacionMensajes.pdf, id=86, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebCreacionMensajes.pdf, id=96, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebCreacionMensajes.pdf Graphic file (type pdf)
 
 <use ../Disenos/DisenoWebCreacionMensajes.pdf>
@@ -582,7 +582,7 @@ Package pdftex.def Info: ../Disenos/DisenoWebCreacionMensajes.pdf used on input
  line 95.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebEliminacionPosts.pdf, id=87, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebEliminacionPosts.pdf, id=97, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebEliminacionPosts.pdf Graphic file (type pdf)
 
 <use ../Disenos/DisenoWebEliminacionPosts.pdf>
@@ -590,14 +590,14 @@ Package pdftex.def Info: ../Disenos/DisenoWebEliminacionPosts.pdf used on input
  line 100.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebEliminacionMensajes.pdf, id=88, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebEliminacionMensajes.pdf, id=98, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebEliminacionMensajes.pdf Graphic file (type pdf)
 <use ../Disenos/DisenoWebEliminacionMensajes.pdf>
 Package pdftex.def Info: ../Disenos/DisenoWebEliminacionMensajes.pdf used on in
 put line 105.
 (pdftex.def)             Requested size: 345.0pt x 487.92259pt.
 
-<../Disenos/DisenoWebModificarDatos.pdf, id=89, 597.50786pt x 845.04686pt>
+<../Disenos/DisenoWebModificarDatos.pdf, id=99, 597.50786pt x 845.04686pt>
 File: ../Disenos/DisenoWebModificarDatos.pdf Graphic file (type pdf)
 
 <use ../Disenos/DisenoWebModificarDatos.pdf>
@@ -610,33 +610,37 @@ nput line 122.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
 )
-(../BBDD/scriptCreacionModeloBD.sql) [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
- [3] [4 <../BBDD/modeloER.pdf>]
-[5 <../Disenos/DisenoWebHome.pdf>] [6 <../Disenos/DisenoWebLogin.pdf>] [7 <../D
-isenos/DisenoWebCreacionPosts.pdf>] [8 <../Disenos/DisenoWebCreacionMensajes.pd
-f>] [9 <../Disenos/DisenoWebEliminacionPosts.pdf>] [10 <../Disenos/DisenoWebEli
-minacionMensajes.pdf>] [11 <../Disenos/DisenoWebModificarDatos.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
-
-(./Documentacion.aux
+(../BBDD/scriptCreacionModeloBD.sql [2]) (../BBDD/ejemploConsultas.sql)
+(../BBDD/ejemploInsercion.sql)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+ [3] [4 <../BBDD/modeloER.pdf>] [5 <../Disenos/DisenoWebHome.pdf>] [6 <../Disen
+os/DisenoWebLogin.pdf>] [7 <../Disenos/DisenoWebCreacionPosts.pdf>] [8 <../Dise
+nos/DisenoWebCreacionMensajes.pdf>] [9 <../Disenos/DisenoWebEliminacionPosts.pd
+f>] [10 <../Disenos/DisenoWebEliminacionMensajes.pdf>] [11 <../Disenos/DisenoWe
+bModificarDatos.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
+ (./Documentacion.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `Documentacion.out' has not changed.
-(rerunfilecheck)             Checksum: DA003B90C9D88F7FD63550EEF92FB4C1;763.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
+(rerunfilecheck)             Checksum: 2167C23836445F567367A52CD357A215;907.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  ) 
 Here is how much of TeX's memory you used:
- 7869 strings out of 493485
- 111182 string characters out of 3143526
- 292909 words of memory out of 3000000
- 11044 multiletter control sequences out of 15000+200000
+ 7890 strings out of 493485
+ 111541 string characters out of 3143526
+ 350869 words of memory out of 3000000
+ 11045 multiletter control sequences out of 15000+200000
  8361 words of font info for 30 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 32i,7n,40p,378b,1813s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,7n,40p,378b,1811s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
@@ -644,10 +648,10 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Documentacion.pdf (11 pages, 160428 bytes).
+Output written on Documentacion.pdf (11 pages, 162832 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

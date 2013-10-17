@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Creaci\363n de un blog}{}% 2
+\BOOKMARK [1][-]{section.3}{An\341lisis y dise\361o formal}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{An\341lisis formal}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Dise\361o formal}{section.3}% 5
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Dise\361o de la base de datos}{subsection.3.2}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Dise\361o de las webs}{subsection.3.2}% 7
+\BOOKMARK [1][-]{section.4}{Soluci\363n Propuesta}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Creaci\363n de la base de datos}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Creaci\363n del modelo de la base de datos}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Ejemplos de consultas}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.4}{Ejemplos de inserciones}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Mejoras en la aplicaci\363n}{}% 13

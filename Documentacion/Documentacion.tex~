@@ -123,6 +123,15 @@
 	\subsection{Creación del modelo de la base de datos}
 	\lstinputlisting{../BBDD/scriptCreacionModeloBD.sql}
 	
+	\subsection{Ejemplos de consultas}
+	
+% 	Como ejemplo de consultas que mas se realizan se van a mostrar una serie de consultas.
+	\lstinputlisting{../BBDD/ejemploConsultas.sql}
+	\subsection{Ejemplos de inserciones}
+	\lstinputlisting{../BBDD/ejemploInsercion.sql}
+% 	\subsection{Ejemplos de actualizaciones}
+% 	\lstinputlisting{}
+	
 % 	\chapter{Mejoras en la aplicación}\label{mejoras}
 	\section{Mejoras en la aplicación}\label{mejoras}
 % 	En el presente capítulo pretende ser un compendio de 
