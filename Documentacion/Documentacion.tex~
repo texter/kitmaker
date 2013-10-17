@@ -9,7 +9,7 @@
 \usepackage{color}
 \definecolor{gray45}{gray}{.45}
 \definecolor{gray97}{gray}{.97}
-\definecolor{gray7}{gray}{.7}
+% \definecolor{gray7}{gray}{.7}
 \usepackage{listings}
 \lstset{
 	language=sql,
