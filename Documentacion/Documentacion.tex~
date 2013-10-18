@@ -150,27 +150,27 @@
 	\subsubsection{Capturas de pantalla}
 	\begin{figure}[htb]
 		\includegraphics[keepaspectratio,width=\textwidth]{home}
-		\caption{index.php}
+		\caption{Ejemplo de index.php}
 		\label{}
 	\end{figure}
 	\begin{figure}[htb]
 		\includegraphics[keepaspectratio,width=\textwidth]{login}
-		\caption{login.php}
+		\caption{Ejemplo de login.php}
 		\label{}
 	\end{figure}
 	\begin{figure}[htb]
 		\includegraphics[keepaspectratio,width=\textwidth]{mostrarPost}
-		\caption{mostrarPost.php}
+		\caption{Ejemplo de mostrarPost.php}
 		\label{}
 	\end{figure}
 	\begin{figure}[htb]
 		\includegraphics[keepaspectratio,width=\textwidth]{crearPost}
-		\caption{crearPost.php}
+		\caption{Ejemplo de crearPost.php}
 		\label{}
 	\end{figure}
 	\begin{figure}[htb]
 		\includegraphics[keepaspectratio,width=\textwidth]{crearRespuesta}
-		\caption{crearRespuesta.php}
+		\caption{Ejemplo de crearRespuesta.php}
 		\label{}
 	\end{figure}
 	
