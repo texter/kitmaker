@@ -1,0 +1,255 @@
+/*
+Reglas para trabajar con CSS
+
+1. Definir los estilos para las ETIQUETAS html por ejemplo: header, footer, article, section, div, a, p etc.
+
+2. Definir los estilos para los IDENTIFICADORES (id), elementos unicos en el html. En el CSS se declaran con # ejemplo: #publicidad{ estilos } y en html se declaran con el atribulto id ejemplo:<div id="publicidad"> contenido </div>.
+
+3. Definir los estilos para las CLASES (class), elementos que se pueden repetir n veces en el html. En el CSS se declaran con el . ejemplo: .nombre-clase{ estilos } y en el html se declaran con el atributo class ejemplo <div class="nombre-clase"> contenido </div>.
+
+4. Todos los estilos de ordenan conforme van apareciendo en la dispocicion del html, teniendo en cuenta los puntos anteriores.
+
+5. Los atributos se declaran de la siguiente forma: {atributo1:valor1; atributo2:valor2; ... ; atributoN:valorN}.
+
+6. Todos los atributos se ordenan alfabeticamente.
+
+7. Si tenemos estilos para el comodin *, las etiquetas html y/o body estos estilos son los primeros en definirse.
+
+8. En el body debemos declarar un tamaño de fuente global.
+
+9. Si tenemos estilos para resetear elementos html, estos iran antes de cualquier estilo.
+*/
+*{
+	margin:0;
+	padding:0;
+}
+@font-face{/*Lugar donde se insertan las diferentes tipografias*/
+	/* Como insertar una tipografia
+	font-family:"Chalet";
+	src: url("../fonts/Chalet.eot");
+	src: url("../fonts/Chalet.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Chalet.woff") format("woff"),
+		 url("../fonts/Chalet.ttf") format("truetype"),
+		 url("../fonts/Chalet.svg#Chalet") format("svg");
+	font-weight:normal;
+	font-style:normal;
+	*/
+}
+/*
+ 16px - 12pt - 100% - 1em (Ancho de M)
+*/
+body{
+	background:#e6e391;
+	color:#000000;
+	text-align: center;
+	font-family:Helvetica, Verdana;
+	font-size:1em;
+}
+header, footer{
+	background:#1E6381;/*Color de fondo de un azul especifico*/
+	border-radius:0.5em;/*Hacer que los bordes sean redondeados*/
+	color:#F60;/*Color naranja para las letras*/
+	display:inline-block;/*Muestra disposicion del elemento*/
+	font-size:14pt;
+	margin:0.25em auto;/*Margen del elemento. En en parejas, primero arriba abajo, segundo izquierda derecha*/
+	text-align: center;/*Este no seria necesario ya que está en el body*/
+	max-width:960px;/*Ancho maximo*/
+	min-width:439px;/*Ancho minimo*/
+	max-height:200px;/*Alto maximo*/
+	min-height:137px;/*Alto minimo*/
+	padding:0.25em;/*Distancia entre el borde del contenido y el elemento*/
+}
+nav{
+	background:#c2dedc;
+	display:inline;
+	margin:50px 50px 50px 50px;
+	max-height:50px;
+	max-width:50px;
+
+}
+article{
+	align:center;
+	background:#00ffff;
+/*	width:95%;/**/
+	
+}
+section#indice{
+	background:#faebd7;
+	border-radius:0.5em;
+	display:inline-block;
+	margin:25px 25px 0px 0px;
+	max-height:600px;
+	max-width:400px;
+	min-height:200px;
+	min-width:200px;
+	padding:0.25em;
+	text-align:left;
+}
+section#login{
+	background:#00ffff;/*Aquamarina*/
+	
+}
+
+.contact_form label{
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+	width: 90px;
+}
+.contact_form input{
+	height:20px;
+	width:220px;
+	padding:5px 8px;
+	
+}
+.contact_form button{
+	margin-left:90px;
+}
+
+section#createPost{
+	background:#98FB98;/*pale green*/
+}
+
+.createPost label{
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+	width: 120px;
+	text-shadow:5px 5px 10px rgba(255,255,255,0.5);/*Sombra: distancia con respencto al texto en el eje x, distancia con respecto al texto en el eje y, Desenfocado, formato*/
+}
+.createPost input{
+	height:20px;
+	width:220px;
+	padding:5px 8px;
+}
+/*
+section#experiencia-laboral{
+	background:#;
+}
+section#experiencia-academica{
+	background:#;
+}
+section#experiencia-investigadora{
+	background:#;
+}
+section#certificaciones{
+	background:#;
+}
+section#articulos{
+	background:#;
+}
+section#libros{
+	background:#;
+}
+section#entrevistas{
+	background:#;
+}
+section#otros-datos{
+	background:#;
+}
+section#referencias{
+	background:#;
+}
+*/
+h1{
+	background:Gold;
+	border-radius:1em;
+	display:inline-block;
+	margin:0.25em auto;
+	text-shadow:5px 5px 10px rgba(255,255,255,0.5);/*Sombra: distancia con respencto al texto en el eje x, distancia con respecto al texto en el eje y, Desenfocado, formato*/
+	padding:0.5em;
+}
+
+h2{
+	background:#c2dedc;
+	border-radius:10px;
+	display:inline-block;
+	margin:0.5em auto;
+	padding:0.5em;
+}
+h3{
+	background:#ADFF2F;
+	border-radius:0.25em;
+	display:inline-block;/**/
+	margin:auto auto;
+}
+h4{
+	background:#808000;/*olive green*/
+}
+h5{
+	background:#4B0082;/*indigo=añil*/
+}
+h6{
+	background:#4f4f2f;/*Dark olive green*/
+}
+figure{
+	display:inline.block;
+	margin:0.25em 0.25em;
+/*	padding:1em;/**/
+}
+/*	background:#000000;/*Black*/
+/*	background:#a62a2a;/*brown*/
+/*	background:#808000;/*olive green*/
+/*	background:#4f4f2f;/*Dark olive green*/
+/*	background:#008000;/*dark green*/
+/*	background:#;/*dark teal*/
+/*	background:#;/*dark blue*/
+/*	background:#4B0082;/*indigo=añil*/
+/*	background:#333333;/*Gray 80%*/
+/*	background:#;/*dark red*/
+/*	background:#;/*orange*/
+/*	background:#;/*dark yellow*/
+/*	background:#00ff00;/*green*/
+/*	background:#;/*Teal=Verde azulado*/
+/*	background:#0000ff;/*blue*/
+/*	background:#;/*Blue gray=Azul grisaceo*/
+/*	background:#808080;/*Gray 50%*/
+/*	background:#ff0000;/*Rojo*/
+/*	background:#;/*Naranja claro*/
+/*	background:#;/*Verde lima*/
+/*	background:#;/*Verde mar*/
+/*	background:#00ffff;/*Aquamarina*/
+/*	background:#;/*Azul claro*/
+/*	background:#;/*Violeta*/
+/*	background:#9a9a9a;/*Gray 40*/
+/*	background:#;/*pink*/
+/*	background:#;/*gold*/
+/*	background:#ffff00;/*yellow*/
+/*	background:#;/*bright green=Verde vivo*/
+/*	background:#;/*turquiose=Turquesa*/
+/*	background:#;/*sky blue*/
+/*	background:#;/*plum=Ciruela*/
+/*	background:#c0c0c0;/*Gray 25*/
+/*	background:#;/*rose=Rosa claro*/
+/*	background:#;/*Tan=Canela*/
+/*	background:#;/*light yellow=Amarillo claro*/
+/*	background:#;/*light green=Verde claro*/
+/*	background:#;/*light turquiose=Turquesa claro*/
+/*	background:#;/*pale blue=Azul palido*/
+/*	background:#;/*lavender=Lavanda*/
+/*	background:#ffffff;/*White*/
+/*	background:#000080;/*navy*/
+/*	background:#;/*Magenta*/
+/*	background:#;/*cyan*/
+/*	background:#98FB98;/*pale green*/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
+/*	background:#;/**/
