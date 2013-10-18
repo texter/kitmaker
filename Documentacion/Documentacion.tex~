@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
-\graphicspath{{../BBDD/},{../Disenos/}}
+\graphicspath{{../BBDD/},{../Disenos/},{img/}}
 
 \usepackage[colorlinks, backref]{hyperref}
 
@@ -75,7 +75,7 @@
 	
 % 	\subsection{Diseño de las webs}
 	\subsubsection{Diseño de las webs}
-	En las figuras \ref{home}, \ref{login}, \ref{post}, \ref{mensaje}, \ref{borrarPost}, \ref{borrarMensaje}, \ref{modificarDatos}, se pueden observar los diferentes diseños que se han planteado para cada una de las partes de la aplicación.
+	En las figuras \ref{home}, \ref{login}, \ref{mostrar post}, \ref{crear post}, \ref{mensaje}, \ref{borrarPost}, \ref{borrarMensaje}, \ref{modificarDatos}, se pueden observar los diferentes diseños que se han planteado para cada una de las partes de la aplicación.
 	\begin{figure}[htb]
 		\includegraphics[keepaspectratio,width=\textwidth]{DisenoWebHome}
 		\caption{Diseño del home}
@@ -136,6 +136,43 @@
 	\lstinputlisting{../BBDD/ejemploInsercion.sql}
 % 	\subsection{Ejemplos de actualizaciones}
 % 	\lstinputlisting{}
+% 	\subsection{Web's}
+% 	\lstloadlanguages{php}
+% 	\lstinputlisting{../html/index.php}
+% 	\lstinputlisting{../html/login.php}
+% 	\lstinputlisting{../html/mostrarPost.php}
+% 	\lstinputlisting{../html/crearPost.php}
+% 	\lstinputlisting{../html/crearMensaje.php}
+% 	\lstinputlisting{../html/agregarPost.php}
+% 	\lstinputlisting{../html/agregarMensaje.php}
+% 	\subsubsection{CSS}
+% 	\lstinputlisting{../html/css/estilos.css}
+	\subsubsection{Capturas de pantalla}
+	\begin{figure}[htb]
+		\includegraphics[keepaspectratio,width=\textwidth]{home}
+		\caption{index.php}
+		\label{}
+	\end{figure}
+	\begin{figure}[htb]
+		\includegraphics[keepaspectratio,width=\textwidth]{login}
+		\caption{login.php}
+		\label{}
+	\end{figure}
+	\begin{figure}[htb]
+		\includegraphics[keepaspectratio,width=\textwidth]{mostrarPost}
+		\caption{mostrarPost.php}
+		\label{}
+	\end{figure}
+	\begin{figure}[htb]
+		\includegraphics[keepaspectratio,width=\textwidth]{crearPost}
+		\caption{crearPost.php}
+		\label{}
+	\end{figure}
+	\begin{figure}[htb]
+		\includegraphics[keepaspectratio,width=\textwidth]{crearRespuesta}
+		\caption{crearRespuesta.php}
+		\label{}
+	\end{figure}
 	
 % 	\chapter{Mejoras en la aplicación}\label{mejoras}
 	\section{Mejoras en la aplicación}\label{mejoras}
