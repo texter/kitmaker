@@ -18,7 +18,7 @@
 			Titulo de la aplicación
 		</h1>
 		<figure>
-			<a href="index.html">Aquí va el logo</a>
+			<a href="index.php">Aquí va el logo</a>
 			<figcaption>Titulo del logo</figcaption>
 		</figure>
 	</header>
@@ -49,8 +49,17 @@
 			while($row = mysql_fetch_array($result)){
 				?><h4><?echo $row["titulo"];?></h4>
 				<p><?echo $row["contenido"];?></p>
+				<a class="boton" title="Responder" href="crearMensaje.php?id=<?echo $id?>">Responder</a>
+				<br>
 				<?
 			}
+			
+			$result = mysql_query("SELECT contenido FROM mensaje WHERE id_post=$id");
+			
+			while($row = mysql_fetch_array($result)){
+				?><p><?echo $row["contenido"];?></p><?
+			}
+			
 			#Cerramos la conexion con la base de datos
 			mysql_close($conexion);
 			?>

@@ -6,18 +6,16 @@
 	#Seleccionamos la base de datos a utilizar
 	mysql_select_db("db_blog") or die("Error al seleccionar la base de datos");
 	
-	$titulo = $_POST['titulo'];
-	$contenido = $_POST['contenido'];
+	$id_post = $_POST['id_post'];
+	$mensaje = $_POST['contenido'];
+	
+// 	echo $id_post;
+// 	echo $mensaje;
 	#Insertamos los datos
-	$insertar = mysql_query ("INSERT INTO post(titulo, contenido, id_usuario) VALUES ('{$titulo}','{$contenido}',5)",$conexion);
+	$insertar = mysql_query ("INSERT INTO mensaje(id_post, contenido, id_usuario) VALUES ('{$id_post}','{$mensaje}',5)",$conexion);
 	if (!$insertar){
 		die("Error al insertar los datos:".mysql_error());
 	}
-	
-// 	#Mostramos los resultados
-// 	while ($row = mysql_fetch_array($result)){
-// 		echo "<article><h4>".$row["titulo"]."</h4></article>";
-// 	}
 	
 	#Cerramos la conexion con la base de datos
 	mysql_close($conexion);

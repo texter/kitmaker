@@ -8,6 +8,7 @@
 	
 	$titulo = $_POST['titulo'];
 	$contenido = $_POST['contenido'];
+	
 	#Insertamos los datos
 	$insertar = mysql_query ("INSERT INTO post(titulo, contenido, id_usuario) VALUES ('{$titulo}','{$contenido}',5)",$conexion);
 	if (!$insertar){

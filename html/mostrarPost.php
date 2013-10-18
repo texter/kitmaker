@@ -12,6 +12,20 @@
 	
 </head>
 <body>
+	<?php
+	//Include the configuration file
+	include_once './inc/wurfl_config_standard.php';
+	
+	$wurflInfo = $wurflManager->getWURFLInfo();
+	if (isset($_GET['ua']) && trim($_GET['ua'])) {
+		$ua = $_GET['ua'];
+		$requestingDevice = $wurflManager->getDeviceForUserAgent($_GET['ua']);
+	} else {
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+		// This line detects the visiting device by looking at its HTTP Request ($_SERVER)
+		$requestingDevice = $wurflManager->getDeviceForHttpRequest($_SERVER);
+	}
+	?>
 	<!-- Cabecera-->
 	<header>
 		<h1>
@@ -33,6 +47,20 @@
 	</nav>
 	<!--Parte central-->
 	<article>
+		<section#WURFL>
+			<h4>VERSION: <?php echo $wurflInfo->version; ?></h4>
+			User Agent: <b> <?php echo htmlspecialchars($ua); ?> </b>
+			<ul>
+				<li>ID: <?php echo $requestingDevice->id; ?></li>
+				<li>Brand Name: <?php echo $requestingDevice->getCapability('brand_name'); ?> </li>
+				<li>Model Name: <?php echo $requestingDevice->getCapability('model_name'); ?> </li>
+				<li>Marketing Name: <?php echo $requestingDevice->getCapability('marketing_name'); ?> </li>
+				<li>Preferred Markup: <?php echo $requestingDevice->getCapability('preferred_markup'); ?> </li>
+				<li>Resolution Width: <?php echo $requestingDevice->getCapability('resolution_width'); ?> </li>
+				<li>Resolution Height: <?php echo $requestingDevice->getCapability('resolution_height'); ?> </li>
+			</ul>
+			<p><b>Query WURFL by providing the user agent:</b></p>
+		</section>
 		<section#cuerpo>
 			<?php
 			#Conectamos con la base de datos
@@ -49,8 +77,17 @@
 			while($row = mysql_fetch_array($result)){
 				?><h4><?echo $row["titulo"];?></h4>
 				<p><?echo $row["contenido"];?></p>
+				<a class="boton" title="Responder" href="crearMensaje.php?id=<?echo $id?>">Responder</a>
+				<br>
 				<?
 			}
+			
+			$result = mysql_query("SELECT contenido FROM mensaje WHERE id_post=$id");
+			
+			while($row = mysql_fetch_array($result)){
+				?><p><?echo $row["contenido"];?></p><?
+			}
+			
 			#Cerramos la conexion con la base de datos
 			mysql_close($conexion);
 			?>

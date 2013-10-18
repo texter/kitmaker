@@ -8,7 +8,8 @@
 	<!--<link rel="stylesheet" type="text/css" media="print"/>-->
 	<!--<link rel="stylesheet" type="text/css" media="movil"/>-->
 	
-<!-- 	<script http://code.jquery.com/jquery-2.0.3.min.js /> -->
+	<!--<script http://code.jquery.com/jquery-1.7.2.min.js/>-->
+	
 </head>
 <body>
 	<!-- Cabecera-->
@@ -25,32 +26,51 @@
 	<nav>
 		<ul>
 			<li><a href="index.php">Inicio</a></li>
-			<li><a href="login.php">Acceder</a></li>
 			<li><a href="crearPost.php">Crear post</a></li>
+			<li><a href="login.php">Acceder</a></li>
 			<li><a></a></li>
 		</ul>
 	</nav>
 	<!--Parte central-->
 	<article>
-		<section#createPost>
-			<form class="createPost" action="agregarPost.php" method="post">
+		<section#createMessage>
+			<form class="createMessage" action="agregarMensaje.php" method="post">
 				<ul>
 					<li>
-						<h3>Entrada</h3>
+						<h3>Respuesta</h3>
 					</li>
 					<li>
-						<label for="titulo"><b>Título:</b></label>
-						<textarea type="text" class="inputtext" name="titulo" id="titulo" placeholder="Título" cols="60" rows="1" required></textarea>
+						<label for="respuesta"><b>Cuerpo de la respuesta:</b></label>
+						<textarea type="text" class="inputtext" name="contenido" id="contenido" placeholder="Inserta aqui tu respuesta" cols="60" rows="10" required></textarea>
 					</li>
 					<li>
-						<label for="entrada"><b>Cuerpo del post:</b></label>
-						<textarea type="text" class="inputtext" name="contenido" id="contenido" placeholder="" cols="60" rows="10" required></textarea>
+						<input name="id_post" id="id_post" type="hidden" value="<?php echo $_GET["id"];?>">
 					</li>
 					<li>
 						<button class="submit" type="submit">Publicar</button>
 					</li>
 				</ul>
 			</form>
+			<?php
+			#Conectamos con la base de datos
+			#Conected to mysql
+			$conexion = mysql_connect("localhost","kitmaker","kitmaker") or die ("Fallo estableciendo la conexión con la base de datos");
+			
+			#Seleccionamos la base de datos a utilizar
+			mysql_select_db("db_blog") or die("Error al seleccionar la base de datos");
+			
+			$id=$_GET["id"];
+			#Consultamos los datos
+			$result = mysql_query("SELECT titulo,contenido FROM post WHERE id=$id");
+			
+			while($row = mysql_fetch_array($result)){
+				?><h4><?echo $row["titulo"];?></h4>
+				<p><?echo $row["contenido"];?></p>
+				<?
+			}
+			#Cerramos la conexion con la base de datos
+			mysql_close($conexion);
+			?>
 		</section>
 	</article>
 	<!--Pie de Pagina-->
