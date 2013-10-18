@@ -26,19 +26,15 @@
 	<nav>
 		<ul>
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="crearPost.html">Crear post</a></li>
 			<li><a href="login.html">Acceder</a></li>
+			<li><a href="crearPost.html">Crear post</a></li>
 			<li><a></a></li>
 		</ul>
 	</nav>
 	<!--Parte central-->
 	<article>
-		<p>
-			Nombre de usuario: <input type="">
-		</p>
-		Zona principal que va a cambiar dependiendo de la zona de la web en la que nos encontremos
-		<section>
-			Sección dentro de la zona principal
+		<section#indice>
+			<script languaje="Javascript" src=./php/inicio.php></script>
 		</section>
 	</article>
 	<!--Pie de Pagina-->

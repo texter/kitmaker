@@ -85,12 +85,44 @@ section#indice{
 	padding:0.25em;
 	text-align:left;
 }
-section#contacto{
-	background:#;
+section#login{
+	background:#00ffff;/*Aquamarina*/
+	
 }
-section#formacion{
-	background:#;
+
+.contact_form label{
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+	width: 90px;
 }
+.contact_form input{
+	height:20px;
+	width:220px;
+	padding:5px 8px;
+	
+}
+.contact_form button{
+	margin-left:90px;
+}
+
+section#createPost{
+	background:#98FB98;/*pale green*/
+}
+
+.createPost label{
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+	width: 120px;
+	text-shadow:5px 5px 10px rgba(255,255,255,0.5);/*Sombra: distancia con respecto al texto en el eje x, distancia con respecto al texto en el eje y, Desenfocado, formato*/
+}
+.createPost input{
+	height:20px;
+	width:220px;
+	padding:8px 8px;
+}
+/*
 section#experiencia-laboral{
 	background:#;
 }
@@ -118,7 +150,7 @@ section#otros-datos{
 section#referencias{
 	background:#;
 }
-
+*/
 h1{
 	background:Gold;
 	border-radius:1em;
@@ -141,9 +173,15 @@ h3{
 	display:inline-block;/**/
 	margin:auto auto;
 }
-h4{}
-h5{}
-h6{}
+h4{
+	background:#808000;/*olive green*/
+}
+h5{
+	background:#4B0082;/*indigo=añil*/
+}
+h6{
+	background:#4f4f2f;/*Dark olive green*/
+}
 figure{
 	display:inline.block;
 	margin:0.25em 0.25em;
@@ -156,7 +194,7 @@ figure{
 /*	background:#008000;/*dark green*/
 /*	background:#;/*dark teal*/
 /*	background:#;/*dark blue*/
-/*	background:#;/*indigo=añil*/
+/*	background:#4B0082;/*indigo=añil*/
 /*	background:#333333;/*Gray 80%*/
 /*	background:#;/*dark red*/
 /*	background:#;/*orange*/
@@ -193,7 +231,7 @@ figure{
 /*	background:#000080;/*navy*/
 /*	background:#;/*Magenta*/
 /*	background:#;/*cyan*/
-/*	background:#;/**/
+/*	background:#98FB98;/*pale green*/
 /*	background:#;/**/
 /*	background:#;/**/
 /*	background:#;/**/

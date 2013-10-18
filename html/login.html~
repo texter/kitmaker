@@ -21,7 +21,6 @@
 			<a href="index.html">Aquí va el logo</a>
 			<figcaption>Titulo del logo</figcaption>
 		</figure>
-		Lo ideal es insertar un enlace a la pagina principal
 	</header>
 	<!--Botones y navegacion-->
 	<nav>
@@ -34,10 +33,25 @@
 	</nav>
 	<!--Parte central-->
 	<article>
-		<section>
-			<p>
-				Nombre de usuario: <input type="">
-			</p>
+		<section#login>
+			<form class="contact_form" action="#" method="post">
+				<ul>
+					<li>
+						<h2>Inicia sesión</h2>
+					</li>
+					<li>
+						<label for="email">Usuario:</label>
+						<input type="email" class="inputtext" name="email" id="email" placeholder="usuario@ejemplo.com" required />
+					</li>
+					<li>
+						<label for="pass">Contraseña:</label>
+						<input type="password" class="inputtext" name="pass" id="pass" placeholder="contraseña" required/>
+					</li>
+					<li>
+						<button class="submit" type="submit">Iniciar sesión</button>
+					</li>
+				</ul>
+			</form>
 		</section>
 	</article>
 	<!--Pie de Pagina-->
