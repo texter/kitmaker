@@ -1,95 +1,207 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<title>LAMP home</title>
-	<meta charset="utf-8"/>
-	<meta description="descripcion de la pagina para los buscadores"/><!-- Facilita la elección de tiendas para adquirir productos -->
-	<link rel="stylesheet" type="text/css" media="all" href="css/estilos.css"/>
-	<!--<link rel="stylesheet" type="text/css" media="print"/>-->
-	<!--<link rel="stylesheet" type="text/css" media="movil"/>-->
+hola<?php
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+	define('ENVIRONMENT', 'development');
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
 	
-<!-- 	<script http://code.jquery.com/jquery-2.0.3.min.js /> -->
-	
-</head>
-<body>
-	<?php
-	//Include the configuration file
-	include_once './inc/wurfl_config_standard.php';
-	
-	$wurflInfo = $wurflManager->getWURFLInfo();
-	if (isset($_GET['ua']) && trim($_GET['ua'])) {
-		$ua = $_GET['ua'];
-		$requestingDevice = $wurflManager->getDeviceForUserAgent($_GET['ua']);
-	} else {
-		$ua = $_SERVER['HTTP_USER_AGENT'];
-		// This line detects the visiting device by looking at its HTTP Request ($_SERVER)
-		$requestingDevice = $wurflManager->getDeviceForHttpRequest($_SERVER);
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
+
+		default:
+			exit('The application environment is not set correctly.');
 	}
-	?>
-	<!-- Cabecera-->
-	<header>
-		<h1>
-			Titulo de la aplicación
-		</h1>
-		<figure>
-			<a href="index.php">Aquí va el logo</a>
-			<figcaption>Titulo del logo</figcaption>
-		</figure>
-	</header>
-	<!--Botones y navegacion-->
-	<nav>
-		<ul>
-			<li><a href="index.php">Inicio</a></li>
-			<li><a href="login.php">Acceder</a></li>
-			<li><a href="crearPost.php">Crear post</a></li>
-			<li><a></a></li>
-		</ul>
-	</nav>
-	<!--Parte central-->
-	<article>
-		<section#WURFL>
-			<h4>VERSION: <?php echo $wurflInfo->version; ?></h4>
-			User Agent: <b> <?php echo htmlspecialchars($ua); ?> </b>
-			<ul>
-				<li>ID: <?php echo $requestingDevice->id; ?></li>
-				<li>Brand Name: <?php echo $requestingDevice->getCapability('brand_name'); ?> </li>
-				<li>Model Name: <?php echo $requestingDevice->getCapability('model_name'); ?> </li>
-				<li>Marketing Name: <?php echo $requestingDevice->getCapability('marketing_name'); ?> </li>
-				<li>Preferred Markup: <?php echo $requestingDevice->getCapability('preferred_markup'); ?> </li>
-				<li>Resolution Width: <?php echo $requestingDevice->getCapability('resolution_width'); ?> </li>
-				<li>Resolution Height: <?php echo $requestingDevice->getCapability('resolution_height'); ?> </li>
-			</ul>
-			<p><b>Query WURFL by providing the user agent:</b></p>
-		</section>
-		<section#indice>
-			<article>
-			<?php
-			#Conectamos con la base de datos
-			#Conected to mysql
-			$conexion = mysql_connect("localhost","kitmaker","kitmaker") or die ("Fallo estableciendo la conexión con la base de datos");
-			
-			#Seleccionamos la base de datos a utilizar
-			mysql_select_db("db_blog") or die("Error al seleccionar la base de datos");
-			
-			#Consultamos los datos
-			$result = mysql_query ("SELECT id,titulo FROM post ORDER BY ID DESC LIMIT 10"/*"select nombre from usuario"*/) or die("Error al consultar los datos");
-			
-			#Mostramos los resultados
-			while ($row = mysql_fetch_array($result)){
-				?><h4><a href="mostrarPost.php?id=<?echo $row["id"]?>"><?echo $row["titulo"]?></a></h4><?
-			}
-			
-			#Cerramos la conexion con la base de datos
-			mysql_close($conexion);
-			?>
-			<article>
-		</section>
-	</article>
-	<!--Pie de Pagina-->
-	<footer>
-		Pie de pagina corporativo.
-		<a href="http://jigsaw.w3.org/css-validator/">Validador CSS</a>
-		<a href="http://validator.w3.org/">Validador HTML</a>
-	</footer>
-</body>
-</html>
+}
+
+/*
+ *---------------------------------------------------------------
+ * SYSTEM FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" folder.
+ * Include the path if the folder is not in the same  directory
+ * as this file.
+ *
+ */
+	$system_path = 'system';
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * folder then the default one you can set its name here. The folder
+ * can also be renamed or relocated anywhere on your server.  If
+ * you do, use a full server path. For more info please see the user guide:
+ * http://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ *
+ */
+	$application_folder = 'application';
+
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here.  For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT:  If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller.  Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ *
+ */
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  Mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (realpath($system_path) !== FALSE)
+	{
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	// this global constant is deprecated.
+	define('EXT', '.php');
+
+	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path));
+
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+
+
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		define('APPPATH', $application_folder.'/');
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.'/'))
+		{
+			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.'/');
+	}
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
+
+/* End of file index.php */
+/* Location: ./index.php */
+?>
+hola
