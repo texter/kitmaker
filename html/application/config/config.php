@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/html/';
+$config['base_url']	= 'http://localhost/';
+// $config['base_url']	= 'http://127.0.0.1/html/';
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ $config['base_url']	= 'http://localhost/html/';
 |
 */
 $config['index_page'] = 'index.php';
+// $config['index_page'] = 'index.php?';
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +59,7 @@ $config['uri_protocol']	= 'AUTO';
 | http://codeigniter.com/user_guide/general/urls.html
 */
 
-$config['url_suffix'] = '';
+// $config['url_suffix'] = '.html';
 
 /*
 |--------------------------------------------------------------------------
@@ -69,8 +71,8 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-// $config['language']	= 'english';
-$config['language']	= 'spanish';
+$config['language']	= 'english';
+// $config['language']	= 'spanish';
 
 /*
 |--------------------------------------------------------------------------
