@@ -1,0 +1,39 @@
+<article>
+	<section#WURFL>
+		<h4>VERSION: <?php echo $wurflInfo->version; ?></h4>
+		User Agent: <b> <?php echo htmlspecialchars($ua); ?> </b>
+		<ul>
+			<li>ID: <?php echo $requestingDevice->id; ?></li>
+			<li>Brand Name: <?php echo $requestingDevice->getCapability('brand_name'); ?> </li>
+			<li>Model Name: <?php echo $requestingDevice->getCapability('model_name'); ?> </li>
+			<li>Marketing Name: <?php echo $requestingDevice->getCapability('marketing_name'); ?> </li>
+			<li>Preferred Markup: <?php echo $requestingDevice->getCapability('preferred_markup'); ?> </li>
+			<li>Resolution Width: <?php echo $requestingDevice->getCapability('resolution_width'); ?> </li>
+			<li>Resolution Height: <?php echo $requestingDevice->getCapability('resolution_height'); ?> </li>
+		</ul>
+		<p><b>Query WURFL by providing the user agent:</b></p>
+	</section>
+	<!--<section#indice>
+		<article>
+// 		<?php
+// 		#Conectamos con la base de datos
+// 		#Conected to mysql
+// 		$conexion = mysql_connect("localhost","kitmaker","kitmaker") or die ("Fallo estableciendo la conexión con la base de datos");
+// 		
+// 		#Seleccionamos la base de datos a utilizar
+// 		mysql_select_db("db_blog") or die("Error al seleccionar la base de datos");
+// 		
+// 		#Consultamos los datos
+// 		$result = mysql_query ("SELECT id,titulo FROM post ORDER BY ID DESC LIMIT 10"/*"select nombre from usuario"*/) or die("Error al consultar los datos");
+// 		
+// 		#Mostramos los resultados
+// 		while ($row = mysql_fetch_array($result)){
+// 				?><h4><a href="mostrarPost.php?id=<?echo $row["id"]?>"><?echo $row["titulo"]?></a></h4><?
+// 		}
+// 		
+// 		#Cerramos la conexion con la base de datos
+// 		mysql_close($conexion);
+// 		?>
+		<article>
+	</section>-->
+</article>
