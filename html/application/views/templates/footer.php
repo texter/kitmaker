@@ -1,8 +1,8 @@
 		<!--Pie de Pagina-->
-		<strong>&copy; 2012</strong>
+		<br><strong>&copy; <?php echo date("Y");?></strong><br>
 		<footer>
-				Pie de pagina corporativo.
-				<a href="http://jigsaw.w3.org/css-validator/">Validador CSS</a>
+				Pie de pagina corporativo.<br>
+				<a href="http://jigsaw.w3.org/css-validator/">Validador CSS</a><br>
 				<a href="http://validator.w3.org/">Validador HTML</a>
 		</footer>
 	</body>
